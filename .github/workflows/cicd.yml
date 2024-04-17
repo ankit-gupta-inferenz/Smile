@@ -15,16 +15,16 @@ jobs:
       - name: Login to Docker Hub1
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
       - name: Build Docker Image
-        run: docker build -t ankit974/Smile .
+        run: docker build -t ankit974/smile .
       - name: Publish image to Docker Hub
-        run: docker push ankit974/Smile:latest
+        run: docker push ankit974/smile:latest
 
   deploy:
     needs: build
     runs-on: self-hosted
     steps:
       - name: Pull image from Docker Hub
-        run: sudo docker pull ankit974/Smile:latest
+        run: sudo docker pull ankit974/smile:latest
       #- name: Check if Container Exists
         #run: |
           #if docker ps -a --format '{{.Names}}' | grep -q '^reactContainer$'; then
