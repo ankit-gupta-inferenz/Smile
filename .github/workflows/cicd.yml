@@ -31,4 +31,4 @@ jobs:
           #  docker rm -f reactContainer
          # fi
       - name: Run Docker Container
-        run: sudo docker run -d -p 8080:80 --name reactContainer1 ankit974/Smile:latest
+        run: sudo docker run -d -p 8080:80 --name reactContainer1 ankit974/smile:latest
