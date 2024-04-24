@@ -18,7 +18,7 @@ COPY Smile /Smile
 # Set working directory
 WORKDIR /Smile
 
-EXPOSE 80
+EXPOSE 8080
 
 # Configure Apache and Django
 RUN apachectl configtest && service apache2 restart \
